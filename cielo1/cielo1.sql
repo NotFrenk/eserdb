@@ -44,6 +44,15 @@ where ArrPart.comp = 'MagicFly' and ArrPart.partenza = LuogoAeroporto.aeroporto;
 
 --9. Quali sono i voli che partono da un qualunque aeroporto della città di ‘Roma’ e
 --atterrano ad un qualunque aeroporto della città di ‘New York’ ? Restituire: codice del volo, nome della compagnia, e aeroporti di partenza e arrivo.
+select ap.codice as codice, 
+		 ap.comp as compagnia,
+
+
+from Arrpart ap, LuogoAeroporto lap, LuogoAeroporto laa, aeroporto aerop_p, aeroporto aerop_arr
+where ap.partenza = lap.aeroporto
+	and lap.citta = 'Roma'
+	and 
+
 
 
 --10. Quali sono i possibili piani di volo con esattamente un cambio (utilizzando solo
